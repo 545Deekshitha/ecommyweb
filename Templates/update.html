@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url("https://media.tenor.com/KsrYRRbv14AAAAAd/star.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container{
+        text-align: center;
+        border: 1px solid black;
+        width: 30%;
+        margin-left: 35%;
+        margin-top: 10%;
+        padding: 2%0%2%0%;
+        background-image: url("https://webartdevelopers.com/blog/wp-content/uploads/2019/02/CSS-Background-Animation-1.gif");
+    }
+    .button:hover{
+        background-color: blueviolet;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+
+            <labe>Name</labe><br>
+            <input type="text" placeholder="Title of the item" name="title" value="{{item_data[1]}}"><br>
+            <p>
+                <label>Description</label><br>
+                <input type="text" placeholder=" Description Of the item" name="description" value="{{item_data[2]}}">
+            </p>
+            <p>
+                <label>Quantity</label>
+                <input name="quantity" type="number" min="1" max="50" value="{{item_data[4]}}">
+
+
+                <label>Price</label>
+                <input name="price" type="number" min="1" max="100000000" value="{{item_data[3]}}">
+            </p>
+            <p>
+                <select name="category"  >
+                    <option value="home" {% if item_data[6]=='home' %}selected{% endif %}>Home</option>
+                    <option value="grocery" {% if item_data[6]=='grocery' %}selected{% endif %}>Grocery</option>
+                    <option value="fashion" {% if item_data[6]=='fashion' %}selected{% endif %}>Fashion</option>
+                    <option value="electronics"{% if item_data[6]=='electrionics' %}selected{% endif %}>Electrionic</option>
+                </select>
+            </p>
+
+
+            <p>
+                <img src="/static/{{item_data[5]}}" width="70%">
+                <input type="file" name="img" style="margin-left: 35%;" value="{{item_data[5]}}">
+            </p>
+
+            <button class="button">Sumibt</button>
+
+        </form>
+
+
+    </div>
+</body>
+
+</html>

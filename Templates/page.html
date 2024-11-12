@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url("https://i.pinimg.com/1200x/56/7c/ae/567cae7c5e5431909718620b5a2a9aa3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .button {
+
+        padding: 2%5%2%5%;
+        border-radius: 8px;
+
+    }
+
+    .button:hover {
+        background-color: #fa745d;
+
+    }
+
+    .button1 {
+
+        padding: 2%5.5%2%5.5%;
+        border-radius: 8px;
+
+    }
+
+    .button1:hover {
+        background-color: #f5dd93;
+
+    }
+
+    .container {
+        margin-top: 12%;
+        margin-left: 50%;
+        border-radius: none;
+        /* background-image: url("https://qph.cf2.quoracdn.net/main-qimg-c1704afdc1273580d30db472e4a9ef3f"); */
+        background-image: url("https://cdn.dribbble.com/users/2326348/screenshots/14068003/media/1038d3bd16b115b931f9beb137e57e7f.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 8px;
+        padding: 10%;
+    
+       
+    }
+    .h1{
+       text-align: center;
+    }
+</style>
+
+<body>
+    <h1 class="h1" style="color:#a65c26" > FlaskStore</h1>
+    <div class="container">
+        
+        <p>
+            <a href="{{url_for('admin_signup')}}"><button class="button">Admin</button></a>
+        </p>
+        <p>
+
+            <a href="{{url_for('user_signup')}}"><button class="button1">User</button></a>
+        </p>
+
+
+    </div>
+
+</body>
+
+</html>

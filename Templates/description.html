@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            width: 18rem;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-content p {
+            margin: 8px 0;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .card-content p.title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .button {
+            border-radius: 8px;
+        }
+
+        .button1 {
+            border-radius: 8px;
+
+        }
+
+        .button1:hover {
+            background-color: green;
+        }
+
+        .button:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div>
+          <a href="{{url_for('description',itemid=data[0])}}"> <img src="/static/{{data[6]}}" alt="Product Image"></a> 
+        </div>
+        <div class="card-content">
+            <p class="title">{{data[1]}}</p>
+            <p>{{data[0]}}</p>
+            <p>Item_id:{{data[2]}}</p>
+            <p>Description:{{data[3]}}</p>
+            <p>Price:{{data[4]}}</p>
+            <p>Avalilabel stock:{{data[5]}}</p>
+            {% if session.get('user') %}
+            <a href="{{url_for('addreview',itemid=data[0])}}">
+                <button class="button1" >Add Review</button>
+            </a>
+            {% endif %}
+            <a href="{{url_for('addcart',itemid=data[0])}}"><button class="button">Add Cart</button></a>
+                <p>
+                    <a href="{{url_for('readreview',itemid=data[0])}}"> <button class="button">Read Review</button></a>
+                    <a href="#"><button class="button1">Back</button></a>
+
+                </p>
+
+        </div>
+    </div>
+</body>
+
+</html>

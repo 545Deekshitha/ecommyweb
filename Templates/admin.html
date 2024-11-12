@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url("https://i.makeagif.com/media/5-27-2017/_sflTN.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+  
+    }
+    .container {
+        margin-top: 10%;
+        text-align: center;
+        border: 1px solid white;
+        width: 35%;
+        margin-left: 30%;
+        border-radius: 10px;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .button:hover {
+        background-color: green;
+
+    }
+
+    .button {
+        padding: 0%8%0%8%;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <form method="post" enctype="multipart/form-data">
+    <div class="container">
+            <h2 style="color: white;">Sign up</h2>
+        <p>
+            <input class="input" required type="text" placeholder="Enter your Name" name="username">
+        </p>
+
+        <p>
+            <input class="input" required type="text" placeholder="Enter Email " name="email">
+        </p>
+        <p>
+            <input class="input" required type="password" placeholder="Enter Password" name="password">
+        </p>
+        <p>
+            <input class="input" required type="text" placeholder="Enter address" name="address">
+        </p>
+        <p>
+            <input required type="file" style=" margin-left: 20%; " accept="image*\" name="img">
+        </p>
+        <p>
+            <a> <button class="button">Signup</button></a><br><a style="color: white;" href="{{url_for('alogin')}}">Already Have An Account</a>
+        </p>
+    </div>
+</form>
+
+</body>
+
+</html>

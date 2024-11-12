@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        /* background-image: url("https://miro.medium.com/v2/resize:fit:960/1*9sRYmj-A5yceD5Fco7PsDQ.gif"); */
+      
+        background-image: url("https://media.licdn.com/dms/image/C4D12AQEgxla-eIycOQ/article-cover_image-shrink_720_1280/0/1648321848374?e=2147483647&v=beta&t=u8NPgV8QlyzfL3zZwDE1IVA0K05I9e8LW5YUP78U584");
+        background-repeat: no-repeat;
+        background-size: cover;
+  
+    }
+    .container {
+        margin-top: 10%;
+        text-align: center;
+   
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        background-size: cover;
+        width: 35%;
+        margin-left: 4%;
+    }
+
+    .button:hover {
+        background-color: green;
+
+    }
+
+    .button {
+        padding: 0%8%0%8%;
+        border-radius: 8px;
+    }
+    
+</style>
+
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <h1 style="color: #8b33be;">Flask Store</h1>
+    <div class="container">
+            <h2 style="color: green;">User Sign up</h2>
+        <p>
+            <input class="input" required type="text" placeholder="Enter your Name" name="username" style="padding: 0.5% 2%;">
+        </p>
+
+        <p>
+            <input class="input"  required type="text" placeholder="Enter Email " name="email" style="padding: 0.5% 2%;">
+        </p>
+        <p>
+            <input class="input" required type="password" placeholder="Enter Password" name="password" style="padding: 0.5% 2%;">
+        </p>
+        <p>
+            <input class="input" required type="text" placeholder="Enter address" name="address" style="padding: 0.5% 2%;">
+        </p>
+        <p>
+            <label>Male</label>
+            <input required type="radio" name="gender" value="male" style="padding: 0.5% 2%;">
+            <label>Female</label>
+            <input required type="radio" name="gender" value="female" style="padding: 0.5% 2%;">
+        </p>
+        
+        <p>
+            <a> <button class="button">Signup</button></a><br><a href="{{url_for('ulogin')}}" style="padding: 0.5% 2%; color:white;">Already Have An Account</a>
+        </p>
+    </div>
+</form>
+
+</body>
+
+</html>
